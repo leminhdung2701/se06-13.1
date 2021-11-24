@@ -75,7 +75,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('dangnhap');
+        return $this->render('test');
     }
 
     /**
@@ -96,7 +96,7 @@ class SiteController extends Controller
 
         $model->password = '';
 
-        return $this->render('login', [
+        return $this->render('dangnhap', [
             'model' => $model,
         ]);
     }
