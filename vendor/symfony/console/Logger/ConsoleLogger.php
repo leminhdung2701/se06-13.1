@@ -17,6 +17,10 @@ use Psr\Log\LogLevel;
 use Symfony\Component\Console\Output\ConsoleOutputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
+if ((new \ReflectionMethod(AbstractLogger::class, 'log'))->hasReturnType()) {
+    throw new \RuntimeException(sprintf('The "%s" logger is not compatible with psr/log >= 3.0. Try running "composer require psr/log:^2.".', ConsoleLogger::class));
+}
+
 /**
  * PSR-3 compliant console logger.
  *
@@ -26,8 +30,8 @@ use Symfony\Component\Console\Output\OutputInterface;
  */
 class ConsoleLogger extends AbstractLogger
 {
-    const INFO = 'info';
-    const ERROR = 'error';
+    public const INFO = 'info';
+    public const ERROR = 'error';
 
     private $output;
     private $verbosityLevelMap = [
@@ -61,6 +65,8 @@ class ConsoleLogger extends AbstractLogger
 
     /**
      * {@inheritdoc}
+     *
+     * @return void
      */
     public function log($level, $message, array $context = [])
     {
@@ -99,14 +105,10 @@ class ConsoleLogger extends AbstractLogger
      * Interpolates context values into the message placeholders.
      *
      * @author PHP Framework Interoperability Group
-     *
-     * @param string $message
-     *
-     * @return string
      */
-    private function interpolate($message, array $context)
+    private function interpolate(string $message, array $context): string
     {
-        if (false === strpos($message, '{')) {
+        if (!str_contains($message, '{')) {
             return $message;
         }
 
