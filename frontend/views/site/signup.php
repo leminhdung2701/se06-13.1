@@ -9,7 +9,17 @@ use yii\bootstrap4\ActiveForm;
 
 $this->title = 'Signup';
 $this->params['breadcrumbs'][] = $this->title;
+
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
 <div class="site-signup">
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -33,3 +43,6 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
     </div>
 </div>
+</body>
+</html>
+

@@ -22,6 +22,9 @@ AppAsset::register($this);
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+    <style>
+        background-color:red;
+    </style>
 </head>
 
 <body class="d-flex flex-column h-100">

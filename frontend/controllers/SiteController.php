@@ -159,7 +159,7 @@ class SiteController extends Controller
             return $this->goHome();
         }
 
-        return $this->render('signup', [
+        return $this->render('dangky', [
             'model' => $model,
         ]);
     }
