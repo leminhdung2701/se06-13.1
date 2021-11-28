@@ -26,7 +26,14 @@ use dosamigos\tinymce\TinyMce;
             'toolbar' => "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
         ]
     ]);?>
-    <?= $form->field($model, 'category_id')->textInput() ?>
+    <?php $cat = new \backend\models\Category()?>
+    <?= $form->field($model, 'category_id')->dropDownList(
+        $cat->getParent(),
+        [
+            'prompt'=>'Chọn danh mục'
+        ]
+
+    ) ?>
     <?=$form->field($model, 'status')->checkbox([
         'label' => Yii::t('app', 'Cho tải xuống'),
         'checked' => 1,

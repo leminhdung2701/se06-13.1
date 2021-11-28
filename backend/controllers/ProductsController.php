@@ -80,7 +80,8 @@ class ProductsController extends Controller
                 $model->filemodel3d->saveAs($path.'/'.$model->filemodel3d->name);
             }
             $model->file_name = $model->filemodel3d->name;
-            $model->file_path = $path.'/'.$model->filemodel3d->name;
+//            $model->file_path = $path.'/'.$model->filemodel3d->name;
+            $model->file_path=$path;
             if ($model->load($this->request->post())) {
                 if($model->save(false)) {
                     Yii::$app->session->addFlash('success','Them thanh cong');
@@ -127,10 +128,28 @@ class ProductsController extends Controller
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
+    function deleteDirectory($dirPath) {
+        if (is_dir($dirPath)) {
+            $objects = scandir($dirPath);
+            foreach ($objects as $object) {
+                if ($object != "." && $object !="..") {
+                    if (filetype($dirPath . DIRECTORY_SEPARATOR . $object) == "dir") {
+                        deleteDirectory($dirPath . DIRECTORY_SEPARATOR . $object);
+                    } else {
+                        unlink($dirPath . DIRECTORY_SEPARATOR . $object);
+                    }
+                }
+            }
+            reset($objects);
+            rmdir($dirPath);
+        }
+    }
     public function actionDelete($id)
     {
+        $model = $this->findModel($id);
+        $this->deleteDirectory($model->file_path);
         $this->findModel($id)->delete();
-
+//        unlink(dirname(__FILE__).'/../../uploads/'.$model->created_at);
         return $this->redirect(['index']);
     }
 

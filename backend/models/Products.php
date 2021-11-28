@@ -54,7 +54,7 @@ class Products extends \yii\db\ActiveRecord
             'user_id' => 'User ID',
             'title' => 'Title',
             'description' => 'Description',
-            'category_id' => 'Category ID',
+            'category_id' => 'Chọn danh mục',
             'file_name' => 'File Name',
             'file_path' => 'File Path',
             'status' => 'Tải xuống',

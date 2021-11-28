@@ -9,6 +9,7 @@ use yii\bootstrap4\Breadcrumbs;
 use yii\bootstrap4\Html;
 use yii\bootstrap4\Nav;
 use yii\bootstrap4\NavBar;
+use yii\helpers\Url;
 
 AppAsset::register($this);
 ?>
@@ -70,8 +71,16 @@ AppAsset::register($this);
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="buttons.html">Buttons</a>
-                        <a class="collapse-item" href="cards.html">Cards</a>
+<!--                        <ul class = "list-group">-->
+<!--                            <li class = "list-gruop-item">-->
+<!--                                --><?php //echo HTML::a("Quản lý bài đăng",['/products']);?>
+<!--                            </li>-->
+<!--                            <li class = "list-gruop-item">-->
+<!--                                --><?php //echo HTML::a("Quản lý danh mục",['/category']);?>
+<!--                            </li>   -->
+<!--                        </ul>-->
+                        <a class="collapse-item" href="index.php?r=products">Quản lý bài đăng</a>
+                        <a class="collapse-item" href="index.php?r=category">Quản lý danh mục</a>
                     </div>
                 </div>
             </li>
