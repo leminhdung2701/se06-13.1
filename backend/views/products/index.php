@@ -33,76 +33,78 @@ $this->params['breadcrumbs'][] = $this->title;
                         'style'=>'width:15px;text-align:center'
                 ],
             ],
-            [
-                'attribute'=>'id',
-                'headerOptions'=>[
-                    'style'=>'width:15px;text-align:center'
-                ],
-                'contentOptions'=>[
-                    'style'=>'width:15px;text-align:center'
-                ],
-            ],
-            [
-                'attribute'=>'user_id',
-                'headerOptions'=>[
-                    'style'=>'width:15px;text-align:center'
-                ],
-                'contentOptions'=>[
-                    'style'=>'width:15px;text-align:center'
-                ],
-            ],
+            // [
+            //     'attribute'=>'id',
+            //     'headerOptions'=>[
+            //         'style'=>'width:15px;text-align:center'
+            //     ],
+            //     'contentOptions'=>[
+            //         'style'=>'width:15px;text-align:center'
+            //     ],
+            // ],
+            // [
+            //     'attribute'=>'user_id',
+            //     'headerOptions'=>[
+            //         'style'=>'width:15px;text-align:center'
+            //     ],
+            //     'contentOptions'=>[
+            //         'style'=>'width:15px;text-align:center'
+            //     ],
+            // ],
             [
                 'attribute'=>'title',
                 'headerOptions'=>[
-                    'style'=>'width:15px;text-align:center'
+                    'style'=>'width:150px; text-align:center'
                 ],
                 'contentOptions'=>[
-                    'style'=>'width:15px;text-align:center'
-                ],
-            ],
-            [
-                'attribute'=>'description',
-                'headerOptions'=>[
-                    'style'=>'width:15px;text-align:center'
-                ],
-                'contentOptions'=>[
-                    'style'=>'width:15px;text-align:center'
+                    'style'=>'width:150px;text-align:center'
                 ],
             ],
             [
                 'attribute'=>'category_id',
                 'headerOptions'=>[
-                    'style'=>'width:15px;text-align:center'
+                    'style'=>'width:150px;text-align:center'
                 ],
                 'contentOptions'=>[
-                    'style'=>'width:15px;text-align:center'
+                    'style'=>'width:150px;text-align:center'
                 ],
+               
             ],
             [
-                'attribute'=>'file_name',
+                'attribute'=>'description',
                 'headerOptions'=>[
-                    'style'=>'width:15px;text-align:center'
+                    'style'=>'text-align:center'
                 ],
                 'contentOptions'=>[
-                    'style'=>'width:15px;text-align:center'
+                    'style'=>''
                 ],
             ],
-            [
-                'attribute'=>'file_path',
-                'headerOptions'=>[
-                    'style'=>'width:15px;text-align:center'
-                ],
-                'contentOptions'=>[
-                    'style'=>'width:15px;text-align:center'
-                ],
-            ],
+            
+            // [
+            //     'attribute'=>'file_name',
+            //     'headerOptions'=>[
+            //         'style'=>'width:15px;text-align:center'
+            //     ],
+            //     'contentOptions'=>[
+            //         'style'=>'width:15px;text-align:center'
+            //     ],
+            // ],
+            // [
+            //     'attribute'=>'file_path',
+            //     'headerOptions'=>[
+            //         'style'=>'width:15px;text-align:center'
+            //     ],
+            //     'contentOptions'=>[
+            //         'style'=>'width:15px;text-align:center'
+            //     ],
+            // ],
             [
                 'attribute'=>'status',
                 'headerOptions'=>[
                     'style'=>'width:15px;text-align:center'
                 ],
                 'contentOptions'=>[
-                    'style'=>'width:15px;text-align:center'
+                    'style'=>'width:15px'
                 ],
                 'content'=>function($model){
                     if($model->status==0){
@@ -116,18 +118,35 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             [
                 'attribute'=>'created_at',
+                'headerOptions'=>[
+                    'style'=>'width:150px;text-align:center'
+                ],
+                'contentOptions'=>[
+                    'style'=>'width:150px;text-align:center'
+                ],
                 'content'=>function($model){
                     return date('d-m-Y',$model->created_at);
                 }
             ],
             [
                 'attribute'=>'updated_at',
+                'headerOptions'=>[
+                    'style'=>'width:150px;text-align:center'
+                ],
+                'contentOptions'=>[
+                    'style'=>'width:150px;text-align:center'
+                ],
                 'content'=>function($model){
                     return date('d-m-Y',$model->created_at);
                 }
             ],
 
-            ['class' => 'yii\grid\ActionColumn'],
+            [                    
+                
+                'contentOptions'=>[
+                    'style'=>'width:150px;text-align:center'
+                ],
+                'class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
 

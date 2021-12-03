@@ -34,15 +34,15 @@ $this->params['breadcrumbs'][] = $this->title;
                 ],
             ],
 
-            [
-                'attribute'=>'id',
-                'headerOptions'=>[
-                    'style'=>'width:15px;text-align:center'
-                ],
-                'contentOptions'=>[
-                    'style'=>'width:15px;text-align:center'
-                ],
-            ],
+            // [
+            //     'attribute'=>'id',
+            //     'headerOptions'=>[
+            //         'style'=>'width:15px;text-align:center'
+            //     ],
+            //     'contentOptions'=>[
+            //         'style'=>'width:15px;text-align:center'
+            //     ],
+            // ],
             [
                 'attribute'=>'id_parent',
                 'headerOptions'=>[
@@ -67,6 +67,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 }
             ],
+            
             [
                 'attribute'=>'name',
                 'headerOptions'=>[
@@ -76,7 +77,12 @@ $this->params['breadcrumbs'][] = $this->title;
                     'style'=>'text-align:center'
                 ],
             ],
-            ['class' => 'yii\grid\ActionColumn'],
+            
+            [
+                'contentOptions'=>[
+                    'style'=>'width:150px;text-align:center'
+                ],
+                'class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
 
