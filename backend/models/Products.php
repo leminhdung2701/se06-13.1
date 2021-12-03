@@ -24,6 +24,7 @@ class Products extends \yii\db\ActiveRecord
      * {@inheritdoc}
      */
     public $filemodel3d;
+    public $tags;
 
     public static function tableName()
     {

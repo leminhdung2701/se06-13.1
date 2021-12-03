@@ -29,7 +29,8 @@
         "codeception/module-filesystem": "^1.0",
         "codeception/verify": "~0.5.0 || ~1.1.0",
         "symfony/browser-kit": ">=2.7 <=4.2.4",
-        "2amigos/yii2-tinymce-widget" : "*"
+        "2amigos/yii2-tinymce-widget" : "*",
+        "mludvik/yii2-tags-input": "~1.0"
     },
     "config": {
         "process-timeout": 1800,

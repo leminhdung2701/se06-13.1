@@ -57,4 +57,13 @@ return array (
       '@dosamigos/tinymce' => $vendorDir . '/2amigos/yii2-tinymce-widget/src',
     ),
   ),
+  'mludvik/yii2-tags-input' => 
+  array (
+    'name' => 'mludvik/yii2-tags-input',
+    'version' => '1.0.0.0',
+    'alias' => 
+    array (
+      '@mludvik/tagsinput' => $vendorDir . '/mludvik/yii2-tags-input/src',
+    ),
+  ),
 );

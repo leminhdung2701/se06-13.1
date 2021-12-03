@@ -40,7 +40,7 @@ AppAsset::register($this);
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">SE06-13.1 <sup></sup></div>
             </a>
 
             <!-- Divider -->
@@ -71,14 +71,14 @@ AppAsset::register($this);
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Components:</h6>
-<!--                        <ul class = "list-group">-->
-<!--                            <li class = "list-gruop-item">-->
-<!--                                --><?php //echo HTML::a("Quản lý bài đăng",['/products']);?>
-<!--                            </li>-->
-<!--                            <li class = "list-gruop-item">-->
-<!--                                --><?php //echo HTML::a("Quản lý danh mục",['/category']);?>
-<!--                            </li>   -->
-<!--                        </ul>-->
+                        <!--                        <ul class = "list-group">-->
+                        <!--                            <li class = "list-gruop-item">-->
+                        <!--                                --><?php //echo HTML::a("Quản lý bài đăng",['/products']);?>
+                        <!--                            </li>-->
+                        <!--                            <li class = "list-gruop-item">-->
+                        <!--                                --><?php //echo HTML::a("Quản lý danh mục",['/category']);?>
+                        <!--                            </li>   -->
+                        <!--                        </ul>-->
                         <a class="collapse-item" href="index.php?r=products">Quản lý bài đăng</a>
                         <a class="collapse-item" href="index.php?r=category">Quản lý danh mục</a>
                     </div>
