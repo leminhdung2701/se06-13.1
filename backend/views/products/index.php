@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\db\Query;
 use backend\models\Products;
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\ProductsSearch */
@@ -68,7 +69,10 @@ $this->params['breadcrumbs'][] = $this->title;
                 'contentOptions'=>[
                     'style'=>'width:150px;text-align:center'
                 ],
-               
+                'content'=>function($model){
+                   return $model->getCategory();
+
+                }
             ],
             [
                 'attribute'=>'description',
@@ -79,7 +83,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'style'=>''
                 ],
             ],
-            
+
             // [
             //     'attribute'=>'file_name',
             //     'headerOptions'=>[
@@ -141,8 +145,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 }
             ],
 
-            [                    
-                
+            [
+
                 'contentOptions'=>[
                     'style'=>'width:150px;text-align:center'
                 ],

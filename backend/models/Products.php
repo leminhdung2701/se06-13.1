@@ -3,6 +3,7 @@
 namespace backend\models;
 
 use Yii;
+
 use dosamigos\taggable\Taggable;
 /**
  * This is the model class for table "products".
@@ -56,7 +57,7 @@ class Products extends \yii\db\ActiveRecord
             'user_id' => 'User ID',
             'title' => 'Title',
             'description' => 'Description',
-            'category_id' => 'Chọn danh mục',
+            'category_id' => 'Danh mục',
             'file_name' => 'File Name',
             'file_path' => 'File Path',
             'status' => 'Tải xuống',
@@ -75,5 +76,10 @@ class Products extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Tag::className(), ['id' => 'tag_id'])->viaTable('products_tags', ['product_id' => 'id']);
     }
-
+    public function getCategory()
+    {
+        ;
+        $category = Category::findOne($this->category_id);
+       return $category->name;
+    }
 }
