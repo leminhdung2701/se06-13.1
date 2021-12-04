@@ -22,9 +22,23 @@ $this->params['breadcrumbs'][] = $this->title;
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
                 'method' => 'post',
-            ],
+            ],  
         ]) ?>
     </p>
+
+    <div class="site-index">
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+        <!-- Use it like any other HTML element -->
+
+        <model-viewer src="http://localhost/se06-13.1/uploads/1638609720/Astronaut.glb" alt="A 3D model of an astronaut"
+            ar ar-modes="webxr scene-viewer quick-look" environment-image="neutral" auto-rotate camera-controls>
+        </model-viewer>
+
+    </div>
+
+
+
 
     <?= DetailView::widget([
         'model' => $model,
@@ -34,6 +48,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'title',
             'description',
             'category_id',
+            'tagNames',
             'file_name',
             'file_path',
             'status',

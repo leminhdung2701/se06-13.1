@@ -3,6 +3,9 @@
 /* @var $this yii\web\View */
 
 $this->title = 'My Yii Application';
+use yii\bootstrap4\Html;
+use yii\bootstrap4\ActiveForm;
+
 ?>
 
 
@@ -45,25 +48,38 @@ $this->title = 'My Yii Application';
                     </span>
 
 
-                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                        <input class="input100" type="text" name="email">
-                        <span class="focus-input100"></span>
-                        <span class="label-input100">Email</span>
-                    </div>
+                    <!-- // -->
+                    <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
+
+                    <!-- // -->
+                    <!-- <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz"> -->
+                    <!-- <input class="input100" type="text" name="email"> -->
+
+                    <!-- <span class="focus-input100"></span> -->
+                    <!-- <span class="label-input100">Email</span> -->
+                    <!-- </div> -->
+
+                    <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
 
 
-                    <div class="wrap-input100 validate-input" data-validate="Password is required">
-                        <input class="input100" type="password" name="pass">
-                        <span class="focus-input100"></span>
-                        <span class="label-input100">Password</span>
-                    </div>
+                    <!-- <div class="wrap-input100 validate-input" data-validate="Password is required"> -->
+                    <!-- <input class="input100" type="password" name="pass"> -->
+
+
+                    <!-- <span class="focus-input100"></span> -->
+                    <!-- <span class="label-input100">Password</span> -->
+                    <!-- </div> -->
+
+                    <?= $form->field($model, 'password')->passwordInput() ?>
 
                     <div class="flex-sb-m w-full p-t-3 p-b-32">
                         <div class="contact100-form-checkbox">
-                            <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-                            <label class="label-checkbox100" for="ckb1">
+                            <!-- <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me"> -->
+                            <?= $form->field($model, 'rememberMe')->checkbox() ?>
+
+                            <!-- <label class="label-checkbox100" for="ckb1">
                                 Remember me
-                            </label>
+                            </label> -->
                         </div>
 
                         <div>
@@ -75,9 +91,12 @@ $this->title = 'My Yii Application';
 
 
                     <div class="container-login100-form-btn">
-                        <button class="login100-form-btn">
+                        <div class="form-group">
+                            <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
+                        </div>
+                        <!-- <button class="login100-form-btn">
                             Login
-                        </button>
+                        </button> -->
                     </div>
 
                     <div class="text-center p-t-46 p-b-20">
@@ -95,6 +114,8 @@ $this->title = 'My Yii Application';
                             <i class="fa fa-twitter" aria-hidden="true"></i>
                         </a>
                     </div>
+                    <?php ActiveForm::end(); ?>
+
                 </form>
 
                 <div class="login100-more" style="background-image: url('dangnhap/images/bg-01.jpg');">
