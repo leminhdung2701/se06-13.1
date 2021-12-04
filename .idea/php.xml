@@ -90,6 +90,15 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
       <path value="$PROJECT_DIR$/vendor/tinymce/tinymce" />
       <path value="$PROJECT_DIR$/vendor/2amigos/yii2-tinymce-widget" />
+      <path value="$PROJECT_DIR$/vendor/bower-asset/tags-input" />
+      <path value="$PROJECT_DIR$/vendor/mludvik/yii2-tags-input" />
+      <path value="$PROJECT_DIR$/vendor/2amigos/yii2-taggable-behavior" />
+      <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-bootstrap" />
+      <path value="$PROJECT_DIR$/vendor/2amigos/yii2-selectize-widget" />
+      <path value="$PROJECT_DIR$/vendor/bower-asset/bootstrap" />
+      <path value="$PROJECT_DIR$/vendor/bower-asset/sifter" />
+      <path value="$PROJECT_DIR$/vendor/bower-asset/selectize" />
+      <path value="$PROJECT_DIR$/vendor/bower-asset/microplugin" />
     </include_path>
   </component>
 </project>

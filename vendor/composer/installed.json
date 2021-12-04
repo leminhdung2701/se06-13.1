@@ -1,6 +1,142 @@
 {
     "packages": [
         {
+            "name": "2amigos/yii2-selectize-widget",
+            "version": "1.1.0",
+            "version_normalized": "1.1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/2amigos/yii2-selectize-widget.git",
+                "reference": "9762a34d1095f15b60f46b876dad245011755bfc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/2amigos/yii2-selectize-widget/zipball/9762a34d1095f15b60f46b876dad245011755bfc",
+                "reference": "9762a34d1095f15b60f46b876dad245011755bfc",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/selectize": "~0.12.0",
+                "yiisoft/yii2": "~2.0.0",
+                "yiisoft/yii2-bootstrap": "~2.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "time": "2017-09-19T22:02:33+00:00",
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "dosamigos\\selectize\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "2amigOS! Consulting Group",
+                    "email": "hola@2amigos.us",
+                    "homepage": "http://2amigos.us",
+                    "role": "Developer"
+                }
+            ],
+            "description": "The selectize.js widget for the Yii framework",
+            "homepage": "https://github.com/2amigos/yii2-selectize-widget",
+            "keywords": [
+                "2amigos",
+                "selectize",
+                "widget",
+                "yii",
+                "yii 2",
+                "yii2"
+            ],
+            "support": {
+                "issues": "https://github.com/2amigos/yii2-selectize-widget/issues",
+                "source": "https://github.com/2amigos/yii2-selectize-widget/tree/master"
+            },
+            "install-path": "../2amigos/yii2-selectize-widget"
+        },
+        {
+            "name": "2amigos/yii2-taggable-behavior",
+            "version": "1.0.2",
+            "version_normalized": "1.0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/2amigos/yii2-taggable-behavior.git",
+                "reference": "139adc766ceab78501a130c8a0bfedd5cdf7d3be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/2amigos/yii2-taggable-behavior/zipball/139adc766ceab78501a130c8a0bfedd5cdf7d3be",
+                "reference": "139adc766ceab78501a130c8a0bfedd5cdf7d3be",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "^2.0"
+            },
+            "require-dev": {
+                "phpunit/dbunit": "~1.0",
+                "phpunit/phpunit": "~4.0"
+            },
+            "time": "2016-12-09T12:23:25+00:00",
+            "type": "yii2-extension",
+            "extra": {
+                "asset-installer-paths": {
+                    "npm-asset-library": "vendor/npm",
+                    "bower-asset-library": "vendor/bower"
+                },
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "dosamigos\\taggable\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "2amigOS! Consulting Group",
+                    "email": "hola@2amigos.us",
+                    "homepage": "http://2amigos.us",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Alexander Kochetov",
+                    "email": "creocoder@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "The taggable behavior for the Yii framework",
+            "homepage": "https://github.com/2amigos/yii2-taggable-behavior",
+            "keywords": [
+                "2amigos",
+                "Behavior",
+                "tags",
+                "yii",
+                "yii 2",
+                "yii2"
+            ],
+            "support": {
+                "issues": "https://github.com/2amigos/yii2-taggable-behavior/issues",
+                "source": "https://github.com/2amigos/yii2-taggable-behavior/tree/master"
+            },
+            "install-path": "../2amigos/yii2-taggable-behavior"
+        },
+        {
             "name": "2amigos/yii2-tinymce-widget",
             "version": "1.1.3",
             "version_normalized": "1.1.3.0",
@@ -134,6 +270,30 @@
             "install-path": "../behat/gherkin"
         },
         {
+            "name": "bower-asset/bootstrap",
+            "version": "v3.4.1",
+            "version_normalized": "3.4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/bootstrap.git",
+                "reference": "68b0d231a13201eb14acd3dc84e51543d16e5f7e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/68b0d231a13201eb14acd3dc84e51543d16e5f7e",
+                "reference": "68b0d231a13201eb14acd3dc84e51543d16e5f7e"
+            },
+            "require": {
+                "bower-asset/jquery": ">=1.9.1,<4.0"
+            },
+            "type": "bower-asset",
+            "installation-source": "dist",
+            "license": [
+                "MIT"
+            ],
+            "install-path": "../bower-asset/bootstrap"
+        },
+        {
             "name": "bower-asset/inputmask",
             "version": "3.3.11",
             "version_normalized": "3.3.11.0",
@@ -179,6 +339,27 @@
             "install-path": "../bower-asset/jquery"
         },
         {
+            "name": "bower-asset/microplugin",
+            "version": "v0.0.3",
+            "version_normalized": "0.0.3.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:brianreavis/microplugin.js.git",
+                "reference": "d8671e6cc769938648f8735610534427cdeeaf67"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/brianreavis/microplugin.js/zipball/d8671e6cc769938648f8735610534427cdeeaf67",
+                "reference": "d8671e6cc769938648f8735610534427cdeeaf67"
+            },
+            "type": "bower-asset",
+            "installation-source": "dist",
+            "license": [
+                "Apache License, Version 2.0"
+            ],
+            "install-path": "../bower-asset/microplugin"
+        },
+        {
             "name": "bower-asset/punycode",
             "version": "v1.3.2",
             "version_normalized": "1.3.2.0",
@@ -195,6 +376,53 @@
             "type": "bower-asset",
             "installation-source": "dist",
             "install-path": "../bower-asset/punycode"
+        },
+        {
+            "name": "bower-asset/selectize",
+            "version": "0.12.6-patch1",
+            "version_normalized": "0.12.6.0-patch1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/selectize/selectize.js.git",
+                "reference": "b8df29c9d4733857a4df4ddbf40d72abfd7c3ae9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/selectize/selectize.js/zipball/b8df29c9d4733857a4df4ddbf40d72abfd7c3ae9",
+                "reference": "b8df29c9d4733857a4df4ddbf40d72abfd7c3ae9"
+            },
+            "require": {
+                "bower-asset/jquery": ">=1.7.0",
+                "bower-asset/microplugin": "dev-0.0.x|0.0.x",
+                "bower-asset/sifter": "dev-0.5.x|0.5.x"
+            },
+            "type": "bower-asset",
+            "installation-source": "dist",
+            "license": [
+                "Apache License, Version 2.0"
+            ],
+            "install-path": "../bower-asset/selectize"
+        },
+        {
+            "name": "bower-asset/sifter",
+            "version": "v0.5.4",
+            "version_normalized": "0.5.4.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:brianreavis/sifter.js.git",
+                "reference": "2009705c24ba9bb0fbe71fa3c60b1dfa682538d2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/brianreavis/sifter.js/zipball/2009705c24ba9bb0fbe71fa3c60b1dfa682538d2",
+                "reference": "2009705c24ba9bb0fbe71fa3c60b1dfa682538d2"
+            },
+            "type": "bower-asset",
+            "installation-source": "dist",
+            "license": [
+                "Apache License, Version 2.0"
+            ],
+            "install-path": "../bower-asset/sifter"
         },
         {
             "name": "bower-asset/tags-input",
@@ -2200,31 +2428,31 @@
         },
         {
             "name": "phpunit/php-token-stream",
-            "version": "4.0.4",
-            "version_normalized": "4.0.4.0",
+            "version": "3.1.3",
+            "version_normalized": "3.1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "a853a0e183b9db7eed023d7933a858fa1c8d25a3"
+                "reference": "9c1da83261628cb24b6a6df371b6e312b3954768"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/a853a0e183b9db7eed023d7933a858fa1c8d25a3",
-                "reference": "a853a0e183b9db7eed023d7933a858fa1c8d25a3",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/9c1da83261628cb24b6a6df371b6e312b3954768",
+                "reference": "9c1da83261628cb24b6a6df371b6e312b3954768",
                 "shasum": ""
             },
             "require": {
                 "ext-tokenizer": "*",
-                "php": "^7.3 || ^8.0"
+                "php": ">=7.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "^9.0"
+                "phpunit/phpunit": "^7.0"
             },
-            "time": "2020-08-04T08:28:15+00:00",
+            "time": "2021-07-26T12:15:06+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "3.1-dev"
                 }
             },
             "installation-source": "dist",
@@ -2250,7 +2478,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-token-stream/issues",
-                "source": "https://github.com/sebastianbergmann/php-token-stream/tree/master"
+                "source": "https://github.com/sebastianbergmann/php-token-stream/tree/3.1.3"
             },
             "funding": [
                 {
@@ -2363,23 +2591,23 @@
         },
         {
             "name": "psr/container",
-            "version": "2.0.2",
-            "version_normalized": "2.0.2.0",
+            "version": "2.0.1",
+            "version_normalized": "2.0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/container.git",
-                "reference": "c71ecc56dfe541dbd90c5360474fbc405f8d5963"
+                "reference": "2ae37329ee82f91efadc282cc2d527fd6065a5ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/container/zipball/c71ecc56dfe541dbd90c5360474fbc405f8d5963",
-                "reference": "c71ecc56dfe541dbd90c5360474fbc405f8d5963",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/2ae37329ee82f91efadc282cc2d527fd6065a5ef",
+                "reference": "2ae37329ee82f91efadc282cc2d527fd6065a5ef",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.4.0"
+                "php": ">=7.2.0"
             },
-            "time": "2021-11-05T16:47:00+00:00",
+            "time": "2021-03-24T13:40:57+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -2413,7 +2641,7 @@
             ],
             "support": {
                 "issues": "https://github.com/php-fig/container/issues",
-                "source": "https://github.com/php-fig/container/tree/2.0.2"
+                "source": "https://github.com/php-fig/container/tree/2.0.1"
             },
             "install-path": "../psr/container"
         },
@@ -3477,32 +3705,37 @@
         },
         {
             "name": "symfony/browser-kit",
-            "version": "v3.4.47",
-            "version_normalized": "3.4.47.0",
+            "version": "v4.2.4",
+            "version_normalized": "4.2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/browser-kit.git",
-                "reference": "9590bd3d3f9fa2f28d34b713ed4765a8cc8ad15c"
+                "reference": "61d85c5af2fc058014c7c89504c3944e73a086f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/browser-kit/zipball/9590bd3d3f9fa2f28d34b713ed4765a8cc8ad15c",
-                "reference": "9590bd3d3f9fa2f28d34b713ed4765a8cc8ad15c",
+                "url": "https://api.github.com/repos/symfony/browser-kit/zipball/61d85c5af2fc058014c7c89504c3944e73a086f0",
+                "reference": "61d85c5af2fc058014c7c89504c3944e73a086f0",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.5.9|>=7.0.8",
-                "symfony/dom-crawler": "~2.8|~3.0|~4.0"
+                "php": "^7.1.3",
+                "symfony/dom-crawler": "~3.4|~4.0"
             },
             "require-dev": {
-                "symfony/css-selector": "~2.8|~3.0|~4.0",
-                "symfony/process": "~2.8|~3.0|~4.0"
+                "symfony/css-selector": "~3.4|~4.0",
+                "symfony/process": "~3.4|~4.0"
             },
             "suggest": {
                 "symfony/process": ""
             },
-            "time": "2020-10-24T10:57:07+00:00",
+            "time": "2019-02-23T15:17:42+00:00",
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.2-dev"
+                }
+            },
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {
@@ -3529,22 +3762,8 @@
             "description": "Symfony BrowserKit Component",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/browser-kit/tree/v3.4.47"
+                "source": "https://github.com/symfony/browser-kit/tree/4.2"
             },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "install-path": "../symfony/browser-kit"
         },
         {
@@ -3955,31 +4174,31 @@
         },
         {
             "name": "symfony/event-dispatcher-contracts",
-            "version": "v3.0.0",
-            "version_normalized": "3.0.0.0",
+            "version": "v2.5.0",
+            "version_normalized": "2.5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher-contracts.git",
-                "reference": "aa5422287b75594b90ee9cd807caf8f0df491385"
+                "reference": "66bea3b09be61613cd3b4043a65a8ec48cfa6d2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/aa5422287b75594b90ee9cd807caf8f0df491385",
-                "reference": "aa5422287b75594b90ee9cd807caf8f0df491385",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/66bea3b09be61613cd3b4043a65a8ec48cfa6d2a",
+                "reference": "66bea3b09be61613cd3b4043a65a8ec48cfa6d2a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0.2",
+                "php": ">=7.2.5",
                 "psr/event-dispatcher": "^1"
             },
             "suggest": {
                 "symfony/event-dispatcher-implementation": ""
             },
-            "time": "2021-07-15T12:33:35+00:00",
+            "time": "2021-07-12T14:48:14+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "3.0-dev"
+                    "dev-main": "2.5-dev"
                 },
                 "thanks": {
                     "name": "symfony/contracts",
@@ -4017,7 +4236,7 @@
                 "standards"
             ],
             "support": {
-                "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v3.0.0"
+                "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v2.5.0"
             },
             "funding": [
                 {
@@ -4859,38 +5078,31 @@
         },
         {
             "name": "symfony/service-contracts",
-            "version": "v3.0.0",
-            "version_normalized": "3.0.0.0",
+            "version": "v1.1.2",
+            "version_normalized": "1.1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/service-contracts.git",
-                "reference": "36715ebf9fb9db73db0cb24263c79077c6fe8603"
+                "reference": "191afdcb5804db960d26d8566b7e9a2843cab3a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/36715ebf9fb9db73db0cb24263c79077c6fe8603",
-                "reference": "36715ebf9fb9db73db0cb24263c79077c6fe8603",
+                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/191afdcb5804db960d26d8566b7e9a2843cab3a0",
+                "reference": "191afdcb5804db960d26d8566b7e9a2843cab3a0",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0.2",
-                "psr/container": "^2.0"
-            },
-            "conflict": {
-                "ext-psr": "<1.1|>=2"
+                "php": "^7.1.3"
             },
             "suggest": {
+                "psr/container": "",
                 "symfony/service-implementation": ""
             },
-            "time": "2021-11-04T17:53:12+00:00",
+            "time": "2019-05-28T07:50:59+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "3.0-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
+                    "dev-master": "1.1-dev"
                 }
             },
             "installation-source": "dist",
@@ -4924,56 +5136,43 @@
                 "standards"
             ],
             "support": {
-                "source": "https://github.com/symfony/service-contracts/tree/v3.0.0"
+                "source": "https://github.com/symfony/service-contracts/tree/v1.1.2"
             },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "install-path": "../symfony/service-contracts"
         },
         {
             "name": "symfony/string",
-            "version": "v6.0.0",
-            "version_normalized": "6.0.0.0",
+            "version": "v5.4.0",
+            "version_normalized": "5.4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/string.git",
-                "reference": "ba727797426af0f587f4800566300bdc0cda0777"
+                "reference": "9ffaaba53c61ba75a3c7a3a779051d1e9ec4fd2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/string/zipball/ba727797426af0f587f4800566300bdc0cda0777",
-                "reference": "ba727797426af0f587f4800566300bdc0cda0777",
+                "url": "https://api.github.com/repos/symfony/string/zipball/9ffaaba53c61ba75a3c7a3a779051d1e9ec4fd2d",
+                "reference": "9ffaaba53c61ba75a3c7a3a779051d1e9ec4fd2d",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0.2",
+                "php": ">=7.2.5",
                 "symfony/polyfill-ctype": "~1.8",
                 "symfony/polyfill-intl-grapheme": "~1.0",
                 "symfony/polyfill-intl-normalizer": "~1.0",
-                "symfony/polyfill-mbstring": "~1.0"
+                "symfony/polyfill-mbstring": "~1.0",
+                "symfony/polyfill-php80": "~1.15"
             },
             "conflict": {
-                "symfony/translation-contracts": "<2.0"
+                "symfony/translation-contracts": ">=3.0"
             },
             "require-dev": {
-                "symfony/error-handler": "^5.4|^6.0",
-                "symfony/http-client": "^5.4|^6.0",
-                "symfony/translation-contracts": "^2.0|^3.0",
-                "symfony/var-exporter": "^5.4|^6.0"
+                "symfony/error-handler": "^4.4|^5.0|^6.0",
+                "symfony/http-client": "^4.4|^5.0|^6.0",
+                "symfony/translation-contracts": "^1.1|^2",
+                "symfony/var-exporter": "^4.4|^5.0|^6.0"
             },
-            "time": "2021-10-29T07:35:21+00:00",
+            "time": "2021-11-24T10:02:00+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -5012,7 +5211,7 @@
                 "utf8"
             ],
             "support": {
-                "source": "https://github.com/symfony/string/tree/v6.0.0"
+                "source": "https://github.com/symfony/string/tree/v5.4.0"
             },
             "funding": [
                 {
@@ -5406,6 +5605,103 @@
                 }
             ],
             "install-path": "../yiisoft/yii2"
+        },
+        {
+            "name": "yiisoft/yii2-bootstrap",
+            "version": "2.0.11",
+            "version_normalized": "2.0.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-bootstrap.git",
+                "reference": "83d144f4089adaa7064ad60dc4c1436daa2eb30e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/83d144f4089adaa7064ad60dc4c1436daa2eb30e",
+                "reference": "83d144f4089adaa7064ad60dc4c1436daa2eb30e",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/bootstrap": "3.4.* | 3.3.* | 3.2.* | 3.1.*",
+                "yiisoft/yii2": "~2.0.6"
+            },
+            "require-dev": {
+                "cweagans/composer-patches": "^1.7",
+                "phpunit/phpunit": "4.8.34"
+            },
+            "time": "2021-08-09T20:54:06+00:00",
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                },
+                "patches": {
+                    "phpunit/phpunit-mock-objects": {
+                        "Fix PHP 7 and 8 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_mock_objects.patch"
+                    },
+                    "phpunit/phpunit": {
+                        "Fix PHP 7 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_php7.patch",
+                        "Fix PHP 8 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_php8.patch"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "yii\\bootstrap\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Qiang Xue",
+                    "email": "qiang.xue@gmail.com",
+                    "homepage": "http://www.yiiframework.com/"
+                },
+                {
+                    "name": "Alexander Makarov",
+                    "email": "sam@rmcreative.ru",
+                    "homepage": "http://rmcreative.ru/"
+                },
+                {
+                    "name": "Antonio Ramirez",
+                    "email": "amigo.cobos@gmail.com"
+                },
+                {
+                    "name": "Paul Klimov",
+                    "email": "klimov.paul@gmail.com"
+                }
+            ],
+            "description": "The Twitter Bootstrap extension for the Yii framework",
+            "keywords": [
+                "bootstrap",
+                "yii2"
+            ],
+            "support": {
+                "forum": "http://www.yiiframework.com/forum/",
+                "irc": "irc://irc.freenode.net/yii",
+                "issues": "https://github.com/yiisoft/yii2-bootstrap/issues",
+                "source": "https://github.com/yiisoft/yii2-bootstrap",
+                "wiki": "http://www.yiiframework.com/wiki/"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/yiisoft",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/yiisoft",
+                    "type": "open_collective"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/yiisoft/yii2-bootstrap",
+                    "type": "tidelift"
+                }
+            ],
+            "install-path": "../yiisoft/yii2-bootstrap"
         },
         {
             "name": "yiisoft/yii2-bootstrap4",
@@ -5916,8 +6212,14 @@
     ],
     "dev": true,
     "dev-package-names": [
+        "2amigos/yii2-selectize-widget",
+        "2amigos/yii2-taggable-behavior",
         "2amigos/yii2-tinymce-widget",
         "behat/gherkin",
+        "bower-asset/bootstrap",
+        "bower-asset/microplugin",
+        "bower-asset/selectize",
+        "bower-asset/sifter",
         "bower-asset/tags-input",
         "codeception/codeception",
         "codeception/lib-asserts",
@@ -5982,6 +6284,7 @@
         "theseer/tokenizer",
         "tinymce/tinymce",
         "webmozart/assert",
+        "yiisoft/yii2-bootstrap",
         "yiisoft/yii2-debug",
         "yiisoft/yii2-faker",
         "yiisoft/yii2-gii"

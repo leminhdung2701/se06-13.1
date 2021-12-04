@@ -66,4 +66,31 @@ return array (
       '@mludvik/tagsinput' => $vendorDir . '/mludvik/yii2-tags-input/src',
     ),
   ),
+  'yiisoft/yii2-bootstrap' => 
+  array (
+    'name' => 'yiisoft/yii2-bootstrap',
+    'version' => '2.0.11.0',
+    'alias' => 
+    array (
+      '@yii/bootstrap' => $vendorDir . '/yiisoft/yii2-bootstrap/src',
+    ),
+  ),
+  '2amigos/yii2-selectize-widget' => 
+  array (
+    'name' => '2amigos/yii2-selectize-widget',
+    'version' => '1.1.0.0',
+    'alias' => 
+    array (
+      '@dosamigos/selectize' => $vendorDir . '/2amigos/yii2-selectize-widget/src',
+    ),
+  ),
+  '2amigos/yii2-taggable-behavior' => 
+  array (
+    'name' => '2amigos/yii2-taggable-behavior',
+    'version' => '1.0.2.0',
+    'alias' => 
+    array (
+      '@dosamigos/taggable' => $vendorDir . '/2amigos/yii2-taggable-behavior/src',
+    ),
+  ),
 );

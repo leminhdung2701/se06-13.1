@@ -3,7 +3,7 @@
 namespace backend\models;
 
 use Yii;
-
+use dosamigos\taggable\Taggable;
 /**
  * This is the model class for table "products".
  *
@@ -18,13 +18,14 @@ use Yii;
  * @property int $created_at
  * @property int $updated_at
  */
+
 class Products extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public $filemodel3d;
-    public $tags;
+    public $tagNames;
 
     public static function tableName()
     {
@@ -38,10 +39,10 @@ class Products extends \yii\db\ActiveRecord
     {
         return [
             [['user_id', 'title', 'description', 'category_id', 'file_name', 'file_path', 'created_at', 'updated_at'], 'required'],
-            [['user_id', 'category_id', 'status', 'created_at', 'updated_at'], 'integer'],
-            [['title', 'description', 'file_name', 'file_path'], 'string', 'max' => 255],
+            [['user_id', 'category_id', 'status', 'created_at', 'updated_at',], 'integer'],
+            [['title', 'description', 'file_name', 'file_path','tagNames',], 'string', 'max' => 255],
             [['filemodel3d'],'file','extensions'=>'glb'],
-
+            [['tagNames'], 'safe'   ],
         ];
     }
 
@@ -63,4 +64,16 @@ class Products extends \yii\db\ActiveRecord
             'updated_at' => 'Ngày cập nhật',
         ];
     }
+    public function behaviors() {
+        return [
+            [
+                'class' => Taggable::className(),
+            ],
+        ];
+    }
+    public function getTags()
+    {
+        return $this->hasMany(Tag::className(), ['id' => 'tag_id'])->viaTable('products_tags', ['product_id' => 'id']);
+    }
+
 }

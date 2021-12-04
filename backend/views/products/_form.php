@@ -3,7 +3,8 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use dosamigos\tinymce\TinyMce;
-use mludvik\tagsinput\TagsInputWidget; 
+use mludvik\tagsinput\TagsInputWidget;
+use dosamigos\selectize\SelectizeTextInput;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Products */
@@ -14,17 +15,17 @@ use mludvik\tagsinput\TagsInputWidget;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <div class="site-index">
-        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-        <style>
-        model-viewer {
-            width: 600px;
-            height: 350px;
-            margin: 0;
-        }
-        </style>
-        <model-viewer camera-controls src="http://localhost/se06-13.1/uploads/1638076747/Cubone.glb"></model-viewer>
-    </div>
+<!--    <div class="site-index">-->
+<!--        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>-->
+<!--        <style>-->
+<!--        model-viewer {-->
+<!--            width: 600px;-->
+<!--            height: 350px;-->
+<!--            margin: 0;-->
+<!--        }-->
+<!--        </style>-->
+<!--        <model-viewer camera-controls src="http://localhost/se06-13.1/uploads/1638076747/Cubone.glb"></model-viewer>-->
+<!--    </div>-->
 
 
 
@@ -51,8 +52,19 @@ use mludvik\tagsinput\TagsInputWidget;
         ]
 
     ) ?>
-
-    <?= $form->field($model, 'tags')->widget(TagsInputWidget::className()) ?>
+    <?= $form->field($model, 'tagNames')->widget(SelectizeTextInput::className(), [
+        // calls an action that returns a JSON object with matched
+        // tags
+        'loadUrl' => ['tag/list'],
+        'options' => ['class' => 'form-control'],
+        'clientOptions' => [
+            'plugins' => ['remove_button'],
+            'valueField' => 'name',
+            'labelField' => 'name',
+            'searchField' => ['name'],
+            'create' => true,
+        ],
+    ])->hint('Use , to separate tags') ?>
 
     <?=$form->field($model, 'status')->checkbox([
         'label' => Yii::t('app', 'Cho tải xuống'),
