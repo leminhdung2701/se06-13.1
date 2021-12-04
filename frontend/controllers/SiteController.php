@@ -96,7 +96,7 @@ class SiteController extends Controller
 
         $model->password = '';
 
-        return $this->render('dangnhap', [
+        return $this->render('login', [
             'model' => $model,
         ]);
     }
@@ -159,7 +159,7 @@ class SiteController extends Controller
             return $this->goHome();
         }
 
-        return $this->render('dangky', [
+        return $this->render('signup', [
             'model' => $model,
         ]);
     }
