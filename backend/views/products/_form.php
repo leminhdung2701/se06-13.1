@@ -3,6 +3,7 @@
 use yii\helpers\FileHelper;
 use yii\helpers\Html;
 use yii\web\UploadedFile;
+use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use dosamigos\tinymce\TinyMce;
 use dosamigos\selectize\SelectizeTextInput;
@@ -16,19 +17,6 @@ use dosamigos\selectize\SelectizeTextInput;
 
     <?php $form = ActiveForm::begin(); ?>
     <?= $form->field($model, 'filemodel3d')->fileInput() ?>
-    <?= $file = $model->filemodel3d ?>
-
-     <div class="site-index">
-        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
-        <!-- Use it like any other HTML element -->
-
-
-        <model-viewer src= "dsadsa" alt="A 3D model of an astronaut"
-            ar ar-modes="webxr scene-viewer quick-look" environment-image="neutral" auto-rotate camera-controls>
-        </model-viewer>
-
-    </div>
 
 
 
@@ -72,7 +60,7 @@ use dosamigos\selectize\SelectizeTextInput;
         'uncheck' => 0,
     ]);?>
 
-    <div class="form-group">
+    <div class=" form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
     </div>
 

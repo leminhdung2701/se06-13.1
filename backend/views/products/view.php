@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
@@ -28,11 +29,15 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <div class="site-index">
         <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
-        <!-- Use it like any other HTML element -->
-
-        <model-viewer src="http://localhost/se06-13.1/uploads/1638609720/Astronaut.glb" alt="A 3D model of an astronaut"
-            ar ar-modes="webxr scene-viewer quick-look" environment-image="neutral" auto-rotate camera-controls>
+        <style>
+        model-viewer {
+            width: 600px;
+            height: 350px;
+            margin: 0;
+        }
+        </style>
+        <!-- <model-viewer src="uploads/1638693890/Astronaut.glb"></model-viewer> -->
+        <model-viewer camera-controls src='<?=$model->file_path?>'>
         </model-viewer>
 
     </div>
@@ -43,15 +48,38 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
-            'user_id',
+            // 'id',
+            // 'user_id',
             'title',
             'description',
-            'category_id',
-            'tagNames',
+            [
+                'attribute'=>'category_id',
+                'value'=>function($model){
+                    return $model->getCategory(); 
+                }
+            ],
+            [            
+                'attribute'=>'tagNames',
+                'value'=>function($model){
+                    return $model->getTags(); 
+                }
+            ],
             'file_name',
-            'file_path',
-            'status',
+            // [
+            //     'attribute'=>'file_path'
+            // ],
+            [
+                'attribute'=>'status',
+                'value'=>function($model){
+                    if($model->status==0){
+                        return 'Không cho tải xuống';
+                    }
+                    else{
+                        return 'Cho tải xuống';
+                    }
+
+                }
+            ],
             [
                 'attribute'=>'created_at',
                 'format'=>'raw',
@@ -67,5 +95,4 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ],
     ]) ?>
-
 </div>

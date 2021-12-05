@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '09c1a18a5c0c241bc721adeabe969463bd20bb96',
+        'reference' => '2867baad3be9f12710ea18148eb2ad0629003bfc',
         'name' => 'yiisoft/yii2-app-advanced',
         'dev' => true,
     ),
@@ -850,7 +850,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '09c1a18a5c0c241bc721adeabe969463bd20bb96',
+            'reference' => '2867baad3be9f12710ea18148eb2ad0629003bfc',
             'dev_requirement' => false,
         ),
         'yiisoft/yii2-bootstrap' => array(
