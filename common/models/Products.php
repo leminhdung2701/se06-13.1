@@ -1,10 +1,10 @@
 <?php
 
-namespace backend\models;
+namespace common\models;
 
 use phpDocumentor\Reflection\Types\String_;
 use Yii;
-
+use common\models\Tag;
 use dosamigos\taggable\Taggable;
 /**
  * This is the model class for table "products".

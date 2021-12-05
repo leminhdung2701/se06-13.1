@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Products */
+/* @var $model common\models\Products */
 
 $this->title = 'Create Products';
 $this->params['breadcrumbs'][] = ['label' => 'Products', 'url' => ['index']];

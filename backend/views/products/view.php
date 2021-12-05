@@ -5,7 +5,7 @@ use yii\helpers\Url;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Products */
+/* @var $model common\models\Products */
 
 $this->title = $model->title;
 $this->params['breadcrumbs'][] = ['label' => 'Products', 'url' => ['index']];

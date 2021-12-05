@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Tag */
+/* @var $model common\models\Tag */
 
 $this->title = 'Create Tag';
 $this->params['breadcrumbs'][] = ['label' => 'Tags', 'url' => ['index']];

@@ -9,7 +9,7 @@ use dosamigos\tinymce\TinyMce;
 use dosamigos\selectize\SelectizeTextInput;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Products */
+/* @var $model common\models\Products */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -32,7 +32,7 @@ use dosamigos\selectize\SelectizeTextInput;
             'toolbar' => "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
         ]
     ]);?>
-    <?php $cat = new \backend\models\Category()?>
+    <?php $cat = new \common\models\Category()?>
     <?= $form->field($model, 'category_id')->dropDownList(
         $cat->getParent(),
         [

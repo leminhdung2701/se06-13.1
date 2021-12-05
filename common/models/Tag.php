@@ -1,8 +1,9 @@
 <?php
 
-namespace backend\models;
+namespace common\models;
 
 use Yii;
+use common\models\Products;
 
 /**
  * This is the model class for table "tag".

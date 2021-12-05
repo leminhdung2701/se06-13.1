@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\db\Query;
-use backend\models\Products;
+use common\models\Products;
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\ProductsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -102,6 +102,7 @@ $this->params['breadcrumbs'][] = $this->title;
             //         'style'=>'width:15px;text-align:center'
             //     ],
             // ],
+            
             [
                 'attribute'=>'status',
                 'headerOptions'=>[
@@ -144,11 +145,26 @@ $this->params['breadcrumbs'][] = $this->title;
                     return date('d-m-Y',$model->created_at);
                 }
             ],
+            [
+                'attribute'=>'tagNames',
+                'headerOptions'=>[
+                    'style'=>'width:130px;text-align:center'
+                ],
+                'contentOptions'=>[
+                    'style'=>'width:130px;text-align:center'
+                ],
+                'content'=>function($model){
+                    return $model->getTags1();
+                }
+            ],
 
             [
-
+                
+                'headerOptions'=>[
+                    'style'=>'width:130px;text-align:center'
+                ],
                 'contentOptions'=>[
-                    'style'=>'width:150px;text-align:center'
+                    'style'=>'width:130px;text-align:center'
                 ],
                 'class' => 'yii\grid\ActionColumn'],
         ],

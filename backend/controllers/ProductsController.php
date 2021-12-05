@@ -2,7 +2,7 @@
 
 namespace backend\controllers;
 use Yii;
-use backend\models\Products;
+use common\models\Products;
 use backend\models\ProductsSearch;
 use yii\helpers\FileHelper;
 use yii\web\Controller;
