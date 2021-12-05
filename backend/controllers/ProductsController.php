@@ -74,6 +74,7 @@ class ProductsController extends Controller
             $model->updated_at=time();
             $model->user_id=Yii::$app->user->id;
             $model->filemodel3d = Uploadedfile::getInstance($model,'filemodel3d');
+//            $path = '../../common/uploads'.$model->created_at;
             $path = 'uploads/'.$model->created_at;
             FileHelper::createDirectory($path);
             if($model->filemodel3d){

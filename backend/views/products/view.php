@@ -23,7 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
                 'method' => 'post',
-            ],  
+            ],
         ]) ?>
     </p>
 
@@ -55,13 +55,13 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute'=>'category_id',
                 'value'=>function($model){
-                    return $model->getCategory(); 
+                    return $model->getCategory();
                 }
             ],
-            [            
+            [
                 'attribute'=>'tagNames',
                 'value'=>function($model){
-                    return $model->getTags(); 
+                    return $model->getTags1();
                 }
             ],
             'file_name',

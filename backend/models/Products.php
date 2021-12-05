@@ -2,6 +2,7 @@
 
 namespace backend\models;
 
+use phpDocumentor\Reflection\Types\String_;
 use Yii;
 
 use dosamigos\taggable\Taggable;
@@ -81,5 +82,18 @@ class Products extends \yii\db\ActiveRecord
         ;
         $category = Category::findOne($this->category_id);
        return $category->name;
+    }
+    public function getTags1()
+    {
+        $query = Tag::find()
+            ->select('name')  // make sure same column name not there in both table
+            ->innerJoin('products_tags', 'products_tags.tag_id = tag.id')
+            ->where(['products_tags.product_id' => $this->id])
+            ->all();
+        $tag = "";
+        foreach ($query as $row){
+            $tag = $tag.$row->name." ";
+        }
+        return $tag;
     }
 }
