@@ -2,7 +2,7 @@
 
 namespace backend\controllers;
 use Yii;
-use backend\models\Products;
+use common\models\Products;
 use backend\models\ProductsSearch;
 use yii\helpers\FileHelper;
 use yii\web\Controller;
@@ -74,14 +74,15 @@ class ProductsController extends Controller
             $model->updated_at=time();
             $model->user_id=Yii::$app->user->id;
             $model->filemodel3d = Uploadedfile::getInstance($model,'filemodel3d');
-            $path = '../../uploads/'.$model->created_at;
+//            $path = '../../common/uploads'.$model->created_at;
+            $path = 'uploads/'.$model->created_at;
             FileHelper::createDirectory($path);
             if($model->filemodel3d){
                 $model->filemodel3d->saveAs($path.'/'.$model->filemodel3d->name);
             }
             $model->file_name = $model->filemodel3d->name;
-//            $model->file_path = $path.'/'.$model->filemodel3d->name;
-            $model->file_path=$path;
+//          $model->file_path = $path.'/'.$model->filemodel3d->name;
+            $model->file_path=$path.'/'.$model->filemodel3d->name;
             if ($model->load($this->request->post())) {
                 if($model->save(false)) {
                     Yii::$app->session->addFlash('success','Them thanh cong');

@@ -1,32 +1,23 @@
 <?php
 
+use yii\helpers\FileHelper;
 use yii\helpers\Html;
+use yii\web\UploadedFile;
+use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use dosamigos\tinymce\TinyMce;
 use dosamigos\selectize\SelectizeTextInput;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Products */
+/* @var $model common\models\Products */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
 <div class="products-form">
 
     <?php $form = ActiveForm::begin(); ?>
-
-    <div class="site-index">
-        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
-        <!-- Use it like any other HTML element -->
-
-
-        <model-viewer src="http://localhost/se06-13.1/uploads/1638609720/Astronaut.glb" alt="A 3D model of an astronaut"
-            ar ar-modes="webxr scene-viewer quick-look" environment-image="neutral" auto-rotate camera-controls>
-        </model-viewer>
-
-    </div>
-
     <?= $form->field($model, 'filemodel3d')->fileInput() ?>
+
 
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
@@ -41,7 +32,7 @@ use dosamigos\selectize\SelectizeTextInput;
             'toolbar' => "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
         ]
     ]);?>
-    <?php $cat = new \backend\models\Category()?>
+    <?php $cat = new \common\models\Category()?>
     <?= $form->field($model, 'category_id')->dropDownList(
         $cat->getParent(),
         [
@@ -69,7 +60,7 @@ use dosamigos\selectize\SelectizeTextInput;
         'uncheck' => 0,
     ]);?>
 
-    <div class="form-group">
+    <div class=" form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
     </div>
 

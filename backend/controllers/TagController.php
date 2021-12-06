@@ -2,7 +2,7 @@
 
 namespace backend\controllers;
 use Yii;
-use backend\models\Tag;
+use common\models\Tag;
 use backend\models\TagSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;

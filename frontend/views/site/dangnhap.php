@@ -1,7 +1,9 @@
 <?php
 
 /* @var $this yii\web\View */
-
+use yii\bootstrap4\Html;
+use yii\bootstrap4\ActiveForm;
+    
 $this->title = 'My Yii Application';
 use yii\bootstrap4\Html;
 use yii\bootstrap4\ActiveForm;

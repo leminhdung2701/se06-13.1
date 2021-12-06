@@ -77,7 +77,7 @@ class SiteController extends Controller
     {
         return $this->render('test');
     }
-
+    
     /**
      * Logs in a user.
      *
@@ -85,9 +85,12 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
+        
+
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
+        
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
@@ -96,7 +99,7 @@ class SiteController extends Controller
 
         $model->password = '';
 
-        return $this->render('dangnhap', [
+        return $this->render('login', [
             'model' => $model,
         ]);
     }
@@ -159,7 +162,7 @@ class SiteController extends Controller
             return $this->goHome();
         }
 
-        return $this->render('dangky', [
+        return $this->render('signup', [
             'model' => $model,
         ]);
     }

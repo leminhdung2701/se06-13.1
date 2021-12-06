@@ -7383,6 +7383,7 @@ textarea.form-control-lg {
   margin-bottom: auto !important;
 }
 
+
 .ms-0 {
   margin-left: 0 !important;
 }
@@ -7590,6 +7591,11 @@ textarea.form-control-lg {
 .ps-5 {
   padding-left: 3rem !important;
 }
+model-viewer{
+    left: 300px;
+    
+}
+
 
 .font-monospace {
   font-family: var(--bs-font-monospace) !important;

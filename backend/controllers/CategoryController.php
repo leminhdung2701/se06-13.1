@@ -2,7 +2,7 @@
 
 namespace backend\controllers;
 
-use backend\models\Category;
+use common\models\Category;
 use backend\models\CategorySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;

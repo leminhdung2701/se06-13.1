@@ -1,17 +1,30 @@
 <?php
 
 /* @var $this \yii\web\View */
+
 /* @var $content string */
 
-use common\widgets\Alert;
 use frontend\assets\AppAsset;
-use yii\bootstrap4\Breadcrumbs;
-use yii\bootstrap4\Html;
+use yii\helpers\Html;
 use yii\bootstrap4\Nav;
 use yii\bootstrap4\NavBar;
+use yii\widgets\Breadcrumbs;
+use common\widgets\Alert;
 
 AppAsset::register($this);
+$this->beginContent('@frontend/views/layouts/base.php');
 ?>
+<<<<<<< HEAD
+<main class="d-flex">
+   
+
+    <div class="content-wrapper p-3">
+        <?= Alert::widget() ?>
+        <?= $content ?>
+    </div>
+</main>
+<?php $this->endContent() ?>
+=======
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>" class="h-100">
@@ -23,7 +36,7 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
     <style>
-        background-color:red;
+    background-color:red;
     </style>
 </head>
 
@@ -87,3 +100,4 @@ AppAsset::register($this);
 
 </html>
 <?php $this->endPage();
+>>>>>>> 14aa68a5fe6ed5e80b07f8a835a7e5cc750081af
